@@ -2,14 +2,15 @@
 <html>
   <head>
     <title><%= title %></title>
-    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/index.css" />
   </head>
   <body>
-    <h1>Messages</h1>
+    <header class="header">Mini message board</header>
+    <h2>Messages</h2>
     <p>
       <% for (var i = 0; i< messages.length; i++) { %> 
         <div class="message">
-          <h2 class="user"> <%= messages[i].user %></h2>
+          <h3 class="user"> <%= messages[i].user %></h3>
           <p class="message-text"> <%= messages[i].text %> </p>
         </div>
       <% } %>
