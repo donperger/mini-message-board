@@ -6,17 +6,20 @@
   </head>
   <body>
     <header class="header">Mini message board</header>
-    <h2>Messages</h2>
-    <p>
-      <% for (var i = 0; i< messages.length; i++) { %> 
-        <div class="message">
-          <h3 class="user"> <%= messages[i].user %></h3>
-          <p class="message-text"> <%= messages[i].text %> </p>
-        </div>
-      <% } %>
-    </p>
-    <form method="GET" action="/new" >
-      <button type="submit">Add a new message</button>
-    </form>
+    <div class="message-container">
+      <h2>Messages</h2>
+      <p>
+        <% for (var i = 0; i< messages.length; i++) { %> 
+          <div class="message">
+            <h3 class="user"> <%= messages[i].user %></h3>
+            <p class="message-text"> <%= messages[i].text %> </p>
+          </div>
+        <% } %>
+      </p>
+      <form method="GET" action="/new" >
+        <button type="submit">Add a new message</button>
+      </form>
+    </div>
+    
   </body>
 </html>
