@@ -5,20 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/form.css" />
   </head>
   <body>
-    <form method="POST" action="/new">
-      <div class="user-name-input">
-        <label for="user">User Name:</label>
-        <input type="text" id="user" name="messageUser" />
-      </div>
+    <header class="header">Mini message board</header>
+    <div class="form-container">
+      <form method="POST" action="/new">
+        <div class="user-name-input input-container">
+          <label for="user">User Name*</label>
+          <input type="text" id="user" name="messageUser" required autofocus />
+        </div>
 
-      <div class="message-input">
-        <label for="messageText">Message</label>
-        <textarea name="messageText" id="text" cols="30" rows="10"></textarea>
-      </div>
+        <div class="message-input input-container">
+          <label for="messageText">Message*</label>
+          <textarea
+            name="messageText"
+            id="text"
+            cols="30"
+            rows="10"
+            required
+          ></textarea>
+        </div>
 
-      <button type="submit">Submit message</button>
-    </form>
+        <button type="submit" class="btn">Submit message</button>
+      </form>
+
+      <form method="GET" action="/">
+        <button class="btn">Cancel</button>
+      </form>
+
+      <p class="req-text">*required</p>
+    </div>
   </body>
 </html>
